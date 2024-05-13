@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="electronic.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../images/image.png" alt="Logo" />
+      </div>
+      <div class="location">
+        <a onclick="getLocation()"
+          >Update Location <i class="fas fa-map-marker"></i
+        ></a>
+        <script>
+          const x = document.getElementById("demo");
+          function getLocation() {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+          }
+          function showPosition(position) {
+            x.innerHTML =
+              "Latitude: " +
+              position.coords.latitude +
+              "<br>Longitude: " +
+              position.coords.longitude;
+          }
+        </script>
+      </div>
+      <div class="search">
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="language">
+        <select>
+          <option value="en" data-flag-icon="us">
+            &#127482;&#127480; English
+          </option>
+          <option value="de" data-flag-icon="de">
+            &#127465;&#127466; German
+          </option>
+          <option value="fr" data-flag-icon="fr">
+            &#127467;&#127479; French
+          </option>
+        </select>
+      </div>
+      <div class="login">
+        <a href="../form/Form.html">Login / Signup</a>
+      </div>
+      <div class="actions">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-shopping-basket"></i>
+      </div>
+    </header>
+    <main>
+      <!--Nav Bar-->
+      <section>
+        <nav class="navbar">
+          <ul class="navbar-items">
+            <li class="dropdown">
+              <h5>About<span class="hamburger">&#9776;</span></h5>
+              <div class="dropdown-content">
+                <a href="../about/story.html">Our Story</a>
+                <a href="../about/mission.html">Mission & Vision</a>
+                <a href="../about/Customer.html">Customer Satisfication</a>
+              </div>
+            </li>
+            <li>
+              <h5><a href="../index.html">Main Page</a></h5>
+            </li>
+            <li class="dropdown">
+              <h5>New Products</h5>
+              <div class="dropdown-content">
+                <a href="../New-products/latest-arrival.html"
+                  >Latest Arrivals</a
+                >
+                <a href="../New-products/popuar.html">Popular</a>
+                <a href="../New-products/Special-offer.html">Special Offers</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Electronics</h5>
+              <div class="dropdown-content">
+                <a href="mobile.html">Smartphones</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="accessoray.html">Accessories</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Books</h5>
+              <div class="dropdown-content">
+                <a href="../Books/fiction.html">Fiction</a>
+                <a href="../Books/Non-fiction.html">Non-Fiction</a>
+                <a href="../Books/Childern.html">Children's Books</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Cosmetics</h5>
+              <div class="dropdown-content">
+                <a href="../Costematic/skincare.html">Skincare</a>
+                <a href="../Costematic/makeup.html">Makeup</a>
+                <a href="../Costematic/fragrences.html">Fragrances</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Entertainment</h5>
+              <div class="dropdown-content">
+                <a href="../Entertainment /Album.html">Albums</a>
+                <a href="../Entertainment /Movies.html">Movies</a>
+                <a href="../Entertainment /concerts.html">Concerts</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Clothes</h5>
+              <div class="dropdown-content">
+                <a href="../clothes/men.html">Men's</a>
+                <a href="../clothes/women.html">Women's</a>
+                <a href="../clothes/kids.html">Kids'</a>
+              </div>
+            </li>
+            <li>
+              <h5><a href="../Gallery/gallery.html">Gallery</a></h5>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!--Latest arrival-->
+      <h1 class="glow">Laptops</h1>
+      <!--Cards-->
+      <section class="card-container">
+        <div class="card">
+          <a
+            href="https://www.ebay.de/itm/256285313937?itmmeta=01HXBH4G4THG67PF50H9AS1TCT&hash=item3babcb8b91:g:E-kAAOSwI8RllJ02&itmprp=enc%3AAQAJAAAA4O%2Bn8X0Lb5X3%2Bmz7jb3iB1GIGOgdYLXAiFchLfPYgjfrevtwOCjMckkpxXcgxriX3btq%2BkQx7ymA4NDz3AFHSpQ9r%2FIw5zkiuZaaMkmjCfmWkf4ojw5YZrs0%2BRFzHhz3fq8U0LdiAsPzdZIo5khODrNAYJcoWc%2BRBs3uL3v67%2BS2cdVhla0F%2BN4AWB9%2FFyFMJVNe9riY3P6gkGl%2BqBgGUEOmZAJjn9GENX7DAVQcvRWLiDgh3TZVhIpEkRHKQ4t2XjZFN3rZNm8O81S%2FYGWoqVfnVfO64EbfpUXs5B%2Frzk6B%7Ctkp%3ABk9SR-aCkvHqYw"
+          >
+            <img src="img/image.png" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-text">
+                Lenovo Notebook ~ 15,6" FHD, Intel N4500, bis zu 32GB RAM, bis
+                zu 1TB SSD, Win11<br />EUR 488.90 <br />Voucher: save up to EUR
+                10
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a
+            href="https://www.ebay.de/itm/145677820774?itmmeta=01HXBH4G4TV9BRPV608MXF2W68&hash=item21eb132366:g:jqQAAOSwmBll-qrp&itmprp=enc%3AAQAJAAAAwLovqzhqJem4Qdx4zFHve9t9gZjhdNcvcDEaYiOz1sZ0bne9VzR5i5VSCcniW%2Fn3XAdYG0vdVpxtTc49oYCUY%2B6Af3zOGBKjJ4B1bb6Y8qSPp4sSmCmd4qzVuBTJLDtdN8zOvJKkEWeSeFUMuU230H5XergS%2FRvwrryXtNEuUeILLnk91GQkrcGgjFvE0D70mQ4c2PBeIGR7sH3hW0oz6uz1NspS6L8bORx1UKXXAwuMWQRs%2B2qKqlI5cBC5x4Wy%2BA%3D%3D%7Ctkp%3ABk9SR-aCkvHqYw"
+          >
+            <img src="img/image copy 3.png" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-text">
+                HP EliteBook 850 G5 Notebook i5-8350U 1,7GHz 16GB Ram 512GB SSD
+                Win11<br />EUR 299.90 <br />Voucher: save up to EUR 10
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a
+            href="https://www.ebay.de/itm/355695783591?itmmeta=01HXBH4G4VNZ2R1KEENDY6QWKC&hash=item52d11eeea7:g:cVoAAOSwta5mOj8N&itmprp=enc%3AAQAJAAAA4LzujcECm%2BXMLXvEFheW4h1PEmNR8FoGGQC4FqY8WTFKa%2FWVoQOvtM9P3bNsvAxjszbIgAz0H%2BOQ4LOXvQ7EhxoLJGYE5yuTB1%2FaVbLx6UXxchivXztlIX4CzVJzN9SH%2Bdf7Z1tc%2FHPqvEdQ6z69MpGPxDxPNCwMOf4q%2BClFUOrOJ3Zy27fnSXYfHMXzFX9s%2BQmXaCLiKAp67V7Uuu3N6rFza%2BtzBIf63o6k6HPx3dZx6G1mIKIUyGIEazeoqoIAnZPyh49qQYQOiiFmMiD%2FFDy%2FpS9AgHwa%2BJ0ZMPH9RSaT%7Ctkp%3ABk9SR-qCkvHqYw"
+          >
+            <img src="img/image copy 2.png" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-text">
+                MSI GL73 8RE Gaming Laptop , A perfect match , A way to explore
+                modern horizon<br />EUR 588.90 <br />Voucher: save up to EUR 10
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section>
+        <footer>
+          <h2>Do you want to follow us?</h2>
+          <h3>Check out our social media pages!</h3>
+          <!-- footer links -->
+          <ul class="icon-list">
+            <li class="icon">
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a
+                href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.657308124612_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9043045&mcid=6935667189886640128&cid=&gad_source=1&gclid=Cj0KCQjw_-GxBhC1ARIsADGgDju9tBa3ypBZzBMBCjFWO_ApIU_nWxvsg5u18d6W00FF5q-4xI4lAboaAhZEEALw_wcB&gclsrc=aw.ds"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a href="https://twitter.com/?lang=en"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </footer>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

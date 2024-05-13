@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  background-color: red;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    rgb(77, 214, 77),
+    aqua,
+    pink,
+    violet
+  );
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+.logo img {
+  width: 100px; /* Adjust size as needed */
+}
+.logo:hover {
+  transform: scale(1.4);
+}
+.logo,
+.location,
+.search,
+.language,
+.login,
+.actions {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.location,
+.language,
+.login,
+.actions {
+  margin-right: 10px;
+}
+.search input {
+  padding: 5px;
+  margin-right: 5px;
+}
+.search button {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+.language select {
+  padding: 5px;
+}
+.language select option[data-flag-icon] {
+  background-image: none; /* Remove default background image */
+  padding-left: 30px; /* Adjust as needed */
+  background-size: 1.5em; /* Adjust flag size */
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+/* Set the flag icon as background image */
+.language select option[data-flag-icon="us"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg");
+}
+.language select option[data-flag-icon="de"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg");
+}
+.language select option[data-flag-icon="fr"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg");
+}
+.login a {
+  color: #fff;
+  text-decoration: none;
+}
+.actions i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+/* Nav Bar*/
+.navbar {
+  background-color: #333;
+  color: #fff;
+}
+.navbar-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0;
+}
+.navbar-items li {
+  position: relative;
+  margin-right: 45px; /*  margin to create a gap between items */
+}
+.navbar-items li:last-child {
+  margin-right: 0; /*  margin from the last item */
+}
+.navbar-items li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* heading */
+.glow {
+  background-color: black;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+/** cards */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between cards */
+  flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
+  margin: -10px; /* Negative margin to offset the margin added to the cards */
+}
+.card {
+  width: 22vw;
+  height: auto;
+  margin: 10px; /* Add margin to create space among cards */
+  text-align: center;
+  align-items: center;
+  background-color: #e1e1e1;
+}
+.card img {
+  width: 50%; /* Make images fill the width of their containers */
+  height: auto;
+}
+/*** Footer **/
+footer {
+  background-color: rgba(128, 128, 128, 0.32);
+  height: 150px;
+  display: block;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.icon-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.icon {
+  margin: 0 0.5rem 0 0.5rem;
+  font-size: 1.8rem;
+}
+.icon a {
+  color: #000;
+  text-decoration: none;
+}
+.icon a:hover {
+  color: #00f;
+}

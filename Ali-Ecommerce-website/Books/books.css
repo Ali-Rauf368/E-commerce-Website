@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  background-color: red;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    rgb(77, 214, 77),
+    aqua,
+    pink,
+    violet
+  );
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+.logo img {
+  width: 100px;
+}
+.logo:hover {
+  transform: scale(1.4);
+}
+.logo,
+.location,
+.search,
+.language,
+.login,
+.actions {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.location,
+.language,
+.login,
+.actions {
+  margin-right: 10px;
+}
+.search input {
+  padding: 5px;
+  margin-right: 5px;
+}
+.search button {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+.language select {
+  padding: 5px;
+}
+.language select option[data-flag-icon] {
+  background-image: none; /* Remove default background image */
+  padding-left: 30px;
+  background-size: 1.5em; /*  flag size */
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+/* Set the flag icon as background image */
+.language select option[data-flag-icon="us"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg");
+}
+.language select option[data-flag-icon="de"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg");
+}
+.language select option[data-flag-icon="fr"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg");
+}
+.login a {
+  color: #fff;
+  text-decoration: none;
+}
+.actions i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+/* Nav Bar*/
+.navbar {
+  background-color: #333;
+  color: #fff;
+}
+.navbar-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0;
+}
+.navbar-items li {
+  position: relative;
+  margin-right: 45px; /*  margin to create a gap between items */
+}
+.navbar-items li:last-child {
+  margin-right: 0; /*  margin from the last item */
+}
+.navbar-items li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*Heading Section */
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.center-text {
+  top: 50%;
+  left: 50%;
+  font-family: Arial, sans-serif; /* Use appropriate font family */
+  font-size: 64px;
+  color: transparent; /* Initially transparent */
+  text-shadow: 0 0 10px white; /* Initial text shadow */
+}
+/* Apply sequential animation delay to each letter */
+.message > .center-text:nth-child(1) {
+  animation: lighting 1s infinite 0.1s alternate; /* Apply animation to the first letter with a delay */
+}
+.message > .center-text:nth-child(2) {
+  animation: lighting 1s infinite 0.2s alternate; /* Apply animation to the second letter with a delay */
+}
+.message > .center-text:nth-child(3) {
+  animation: lighting 1s infinite 0.3s alternate; /* Apply animation to the third letter with a delay */
+}
+.message > .center-text:nth-child(4) {
+  animation: lighting 1s infinite 0.4s alternate; /* Apply animation to the fourth letter with a delay */
+}
+.message > .center-text:nth-child(5) {
+  animation: lighting 1s infinite 0.5s alternate; /* Apply animation to the fifth letter with a delay */
+}
+.message > .center-text:nth-child(6) {
+  animation: lighting 1s infinite 0.6s alternate; /* Apply animation to the sixht letter with a delay */
+}
+.message > .center-text:nth-child(7) {
+  animation: lighting 1s infinite 0.7s alternate; /* Apply animation to the seventh letter with a delay */
+}
+.message > .center-text:nth-child(8) {
+  animation: lighting 1s infinite 0.8s alternate; /* Apply animation to the third eight with a delay */
+}
+.message > .center-text:nth-child(9) {
+  animation: lighting 1s infinite 0.9s alternate; /* Apply animation to the third ninth with a delay */
+}
+@keyframes lighting {
+  0% {
+    text-shadow: 0 0 10px white; /* Initial text shadow */
+    color: transparent; /* Initial text color */
+  }
+  50% {
+    text-shadow: 0 0 20px white, 0 0 30px white; /* Larger text shadow to simulate lightning */
+    color: yellow; /* Yellow color during lightning */
+  }
+  100% {
+    text-shadow: 0 0 10px white; /* Final text shadow */
+    color: transparent; /* Final text color */
+  }
+}
+
+
+/* heading */
+/*.glow {
+    background-color: black;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  */
+/** cards */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  width: calc(30.333% - 1rem);
+  margin-bottom: 1rem;
+  background-color: #d9bda5;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.card img {
+  width: 40%; /* Make images fill the width of their containers */
+  height: 165px;
+  display: flex;
+  align-items: center;
+}
+/*** Footer **/
+footer {
+  background-color: rgba(128, 128, 128, 0.32);
+  height: 150px;
+  display: block;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.icon-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.icon {
+  margin: 0 0.5rem 0 0.5rem;
+  font-size: 1.8rem;
+}
+.icon a {
+  color: #000;
+  text-decoration: none;
+}
+.icon a:hover {
+  color: #00f;
+}

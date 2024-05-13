@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="ent.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../images/image.png" alt="Logo" />
+      </div>
+      <div class="location">
+        <a onclick="getLocation()"
+          >Update Location <i class="fas fa-map-marker"></i
+        ></a>
+        <script>
+          const x = document.getElementById("demo");
+          function getLocation() {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+          }
+          function showPosition(position) {
+            x.innerHTML =
+              "Latitude: " +
+              position.coords.latitude +
+              "<br>Longitude: " +
+              position.coords.longitude;
+          }
+        </script>
+      </div>
+      <div class="search">
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="language">
+        <select>
+          <option value="en" data-flag-icon="us">
+            &#127482;&#127480; English
+          </option>
+          <option value="de" data-flag-icon="de">
+            &#127465;&#127466; German
+          </option>
+          <option value="fr" data-flag-icon="fr">
+            &#127467;&#127479; French
+          </option>
+        </select>
+      </div>
+      <div class="login">
+        <a href="../form/Form.html">Login / Signup</a>
+      </div>
+      <div class="actions">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-shopping-basket"></i>
+      </div>
+    </header>
+    <main>
+      <!--Nav Bar-->
+      <section>
+        <nav class="navbar">
+          <ul class="navbar-items">
+            <li class="dropdown">
+              <h5>About<span class="hamburger">&#9776;</span></h5>
+              <div class="dropdown-content">
+                <a href="../about/story.html">Our Story</a>
+                <a href="../about/mission.html">Mission & Vision</a>
+                <a href="../about/Customer.html">Customer Satisfication</a>
+              </div>
+            </li>
+            <li>
+              <h5><a href="../index.html">Main Page</a></h5>
+            </li>
+            <li class="dropdown">
+              <h5>New Products</h5>
+              <div class="dropdown-content">
+                <a href="../New-products/latest-arrival.html"
+                  >Latest Arrivals</a
+                >
+                <a href="../New-products/popuar.html">Popular</a>
+                <a href="../New-products/Special-offer.html">Special Offers</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Electronics</h5>
+              <div class="dropdown-content">
+                <a href="../Electronics/mobile.html">Smartphones</a>
+                <a href="../Electronics/laptop.html">Laptops</a>
+                <a href="../Electronics/accessoray.html">Accessories</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Books</h5>
+              <div class="dropdown-content">
+                <a href="../Books/fiction.html">Fiction</a>
+                <a href="../Books/Non-fiction.html">Non-Fiction</a>
+                <a href="../Books/Childern.html">Children's Books</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Cosmetics</h5>
+              <div class="dropdown-content">
+                <a href="../Costematic/skincare.html">Skincare</a>
+                <a href="../Costematic/makeup.html">Makeup</a>
+                <a href="../Costematic/fragrences.html">Fragrances</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Entertainment</h5>
+              <div class="dropdown-content">
+                <a href="Album.html">Albums</a>
+                <a href="Movies.html">Movies</a>
+                <a href="concerts.html">Concerts</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Clothes</h5>
+              <div class="dropdown-content">
+                <a href="../clothes/men.html">Men's</a>
+                <a href="../clothes/women.html">Women's</a>
+                <a href="../clothes/kids.html">Kids'</a>
+              </div>
+            </li>
+            <li>
+              <h5><a href="../Gallery/gallery.html">Gallery</a></h5>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!--Latest arrival-->
+      <h1 class="glow">Albums</h1>
+      <!--Cards-->
+      <section class="card-container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-3" style="max-width: 540px">
+              <div
+                class="row g-0"
+                style="background-color: black; color: white"
+              >
+                <div class="col-md-4">
+                  <img
+                    src="img/image.png"
+                    class="img-fluid rounded-start"
+                    style="height: 100%"
+                    alt="img"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Corridos Bélicos, Vol. IV</h5>
+                    <p class="card-text">
+                      Corridos Bélicos, Vol. IV is a studio album by Mexican
+                      singer Luis R. Conriquez.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Luis_R._Conriquez"
+                      >For more Detail</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3" style="max-width: 540px">
+              <div
+                class="row g-0"
+                style="background-color: black; color: white"
+              >
+                <div class="col-md-4">
+                  <img
+                    src="img/image copy.png"
+                    class="img-fluid rounded-start"
+                    style="height: 100%"
+                    alt="img"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">A Matter of Time</h5>
+                    <p class="card-text">
+                      A Matter of Time is the sixth studio album by British rock
+                      band Shed Seven.
+                    </p>
+                    <a
+                      href="https://en.wikipedia.org/wiki/A_Matter_of_Time_(Shed_Seven_album)"
+                      >For more Detail</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3" style="max-width: 540px">
+              <div
+                class="row g-0"
+                style="background-color: black; color: white"
+              >
+                <div class="col-md-4">
+                  <img
+                    src="img/image copy 2.png"
+                    class="img-fluid rounded-start"
+                    style="height: 100%"
+                    alt="img"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Born B</h5>
+                    <p class="card-text">
+                      Born to Be is the second Korean-language and the third
+                      overall studio album
+                    </p>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Born_to_Be_(Itzy_album)"
+                      >For more Detail</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <footer>
+          <h2>Do you want to follow us?</h2>
+          <h3>Check out our social media pages!</h3>
+          <!-- footer links -->
+          <ul class="icon-list">
+            <li class="icon">
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a
+                href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.657308124612_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9043045&mcid=6935667189886640128&cid=&gad_source=1&gclid=Cj0KCQjw_-GxBhC1ARIsADGgDju9tBa3ypBZzBMBCjFWO_ApIU_nWxvsg5u18d6W00FF5q-4xI4lAboaAhZEEALw_wcB&gclsrc=aw.ds"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a href="https://twitter.com/?lang=en"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </footer>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

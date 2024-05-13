@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  background-color: red;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    rgb(77, 214, 77),
+    aqua,
+    pink,
+    violet
+  ); /*A gradient is a basically transition among different color and right specifies the direction of the gradient. In this case, it goes from left to right horizontally. */
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+.logo img {
+  width: 100px;
+}
+.logo:hover {
+  transform: scale(1.4); /* Transform the actuall size of object */
+}
+.logo,
+.location,
+.search,
+.language,
+.login,
+.actions {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.location,
+.language,
+.login,
+.actions {
+  margin-right: 10px;
+}
+.search input {
+  padding: 5px;
+  margin-right: 5px;
+}
+.search button {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+.language select {
+  padding: 5px;
+}
+.language select option[data-flag-icon] {
+  background-image: none; /* Remove default background image */
+  padding-left: 30px;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+/* Set the flag icon as background image */
+.language select option[data-flag-icon="us"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg");
+}
+.language select option[data-flag-icon="de"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg");
+}
+.language select option[data-flag-icon="fr"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg");
+}
+.login a {
+  color: #fff;
+  text-decoration: none;
+}
+.actions i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+/* Nav Bar*/
+.navbar {
+  background-color: #333;
+  color: #fff;
+}
+.navbar-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0;
+}
+.navbar-items li {
+  position: relative;
+}
+.navbar-items li {
+  position: relative;
+  margin-right: 45px; /*  margin to create a gap between items */
+}
+.navbar-items li:last-child {
+  margin-right: 0; /*  margin from the last item */
+}
+.navbar-items li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Animated text  */
+.animated-text {
+  animation: moveLeftRight 15s linear infinite alternate; /*Animation property will cause it to move left and right continuously for 15 seconds, with a constant speed, and it will repeat this motion indefinitely, alternating direction each time.
+  */
+  font-size: 2em;
+  color: black;
+}
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0vw);
+  }
+  50% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+/* Animated icon */
+.info-icon {
+  position: absolute;
+  bottom: 50%; /* Position the icon vertically centered */
+  left: 40px;
+  transform: translateY(50%); /* Center the icon vertically */
+  cursor: pointer;
+  animation: moveUpDown 10s linear infinite alternate;
+}
+@keyframes moveUpDown {
+  0% {
+    bottom: 35%; /* Starting position */
+  }
+  50% {
+    bottom: 70%; /* Middle position */
+  }
+  100% {
+    bottom: 35%; /* Ending position */
+  }
+}
+.info-icon .info-content {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  padding: 10px;
+  background-color: aqua;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: -1; /* Ensure it appears above other elements */
+  clip-path: inset(100% 0 0 0);
+  /*This property is used to create a clipping region for an element, defining which part of the element is visible. The inset() function defines a rectangular clipping region.
+    In this case, inset(100% 0 0 0) sets the clipping region to be a rectangle where the top, right, and bottom edges are 0 and the left edge extends to the full width of the element (100%). This effectively hides the element because it's clipped to nothing.*/
+  transition: clip-path 0.3s ease;
+}
+.info-icon span {
+  width: 70px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Make it round */
+  color: white;
+  font-size: 24px; /* Adjust icon size */
+  position: relative;
+  z-index: 1; /* Ensure it appears above other elements */
+  transition: transform 0.3s;
+}
+.info-icon:hover {
+  transform: scale(1.2);
+  animation-play-state: paused; /* Pause the animation */
+}
+.info-icon:hover .info-content {
+  display: block;
+  clip-path: inset(0 0 0 0);
+}
+/* Centering the slider section */
+.carousel-section {
+  width: auto;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 230px; /* Maintain the desired height */
+}
+.carousel-inner {
+  max-width: auto; /* Ensure the carousel inner fits within the slider section */
+}
+.carousel-item img {
+  height: 230px;
+  max-height: 230px;
+  width: auto;
+  margin: 0 auto;
+}
+/*cards*/
+h2 {
+  margin: 10px; 
+  padding: 7px; 
+}
+.products .cards {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to ensure all cards stay in one row */
+  justify-content: center; /* Center cards horizontally */
+  overflow-x: auto; /* Add horizontal scrolling if needed */
+}
+.product-card {
+  flex: 0 0 auto; /* Ensure cards don't grow or shrink */
+  width: 15rem; /* Set a fixed width for each card */
+  margin-right: 0.5rem; /* Add some spacing between cards */
+}
+.product-card:last-child {
+  margin-right: 0; /* Remove right margin from the last card to prevent extra spacing */
+}
+.product-card img {
+  width: 100%; /* Ensure images take full width of the card */
+  height: 10rem; /* Set a fixed height for each image */
+}
+.product-card p {
+  text-align: center; /* Center text */
+  margin-top: 0.5rem;
+  margin-bottom: 0; /* Remove bottom margin */
+}
+/* Books */
+.products-Round .cards {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to ensure all cards stay in one row */
+  justify-content: center; /* Center cards horizontally */
+  overflow-x: auto; /* Add horizontal scrolling if needed */
+}
+.product-Round-card {
+  flex: 0 0 auto; /* Ensure cards don't grow or shrink */
+  width: 15rem; /* Set a fixed width for each card */
+  margin-right: 0.5rem; /* Add some spacing between cards */
+}
+.product-Round-card:last-child {
+  margin-right: 0; /* Remove right margin from the last card to prevent extra spacing */
+}
+.product-Round-card img {
+  width: 100%; /* Ensure images take full width of the card */
+  height: 10rem; /* Set a fixed height for each image */
+  border-radius: 50%; /* Make the images round */
+}
+.product-Round-card p {
+  text-align: center; /* Center text */
+  margin-top: 0.5rem; /* Adjust spacing */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+/** Costematic **/
+.costemaics .ccards {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to ensure all cards stay in one row */
+  justify-content: center; /* Center cards horizontally */
+  overflow-x: auto; /* Add horizontal scrolling if needed */
+}
+.cos-card {
+  flex: 0 0 auto; /* Ensure cards don't grow or shrink */
+  width: 15rem; /* Set a fixed width for each card */
+  margin-right: 0.5rem; /* Add some spacing between cards */
+}
+.cos-card:last-child {
+  margin-right: 0; /* Remove right margin from the last card to prevent extra spacing */
+}
+.cos-card img {
+  width: 100%; /* Ensure images take full width of the card */
+  height: 10rem; /* Set a fixed height for each image */
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire space */
+}
+.cos-card p {
+  text-align: center; /* Center text */
+  margin-top: 0.5rem; /* Adjust spacing */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+.cos-card:hover {
+  transform: scale(1.8); /* Prevent scaling on hover */
+  transition: transform 0.3s ease; /* Add a smooth transition */
+}
+/*** Clothes **/
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+.processing-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.processing-item {
+  margin-bottom: 20px;
+  opacity: 0; /* Initially hide the items */
+  margin-right: 20px;
+}
+.processing-item img {
+  height: 10rem;
+  width: 10rem;
+  transition: filter 0.3s;
+}
+.processing-item {
+  opacity: 0; /* Start with all items hidden */
+}
+.processing-item a:hover img {
+  filter: brightness(70%); /* Adjust brightness of the image */
+}
+@keyframes fade-in-out {
+  0%,
+  25% {
+    opacity: 0;
+  } /* Start and end with opacity 0 */
+  33%,
+  58% {
+    opacity: 1;
+  } /* Fade in and stay visible */
+  66%,
+  100% {
+    opacity: 0;
+  } /* Fade out */
+}
+.processing-item:nth-child(1) {
+  animation: fade-in-out 9s infinite; /* Each image's animation duration */
+}
+.processing-item:nth-child(2) {
+  animation: fade-in-out 9s infinite 3s; /* Start after the first image */
+}
+.processing-item:nth-child(3) {
+  animation: fade-in-out 9s infinite 6s; /* Start after the second image */
+}
+/*** Footer **/
+footer {
+  background-color: rgba(128, 128, 128, 0.32);
+  height: 175px;
+  display: block;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.icon-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.icon {
+  margin: 0 0.5rem 0 0.5rem;
+  font-size: 1.8rem;
+}
+.icon a {
+  color: #000;
+  text-decoration: none;
+}
+.icon a:hover {
+  color: #00f;
+}

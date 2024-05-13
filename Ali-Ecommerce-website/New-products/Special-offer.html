@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="np.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../images/image.png" alt="Logo" />
+      </div>
+      <div class="location">
+        <a onclick="getLocation()"
+          >Update Location <i class="fas fa-map-marker"></i
+        ></a>
+        <script>
+          const x = document.getElementById("demo");
+          function getLocation() {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+          }
+          function showPosition(position) {
+            x.innerHTML =
+              "Latitude: " +
+              position.coords.latitude +
+              "<br>Longitude: " +
+              position.coords.longitude;
+          }
+        </script>
+      </div>
+      <div class="search">
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="language">
+        <select>
+          <option value="en" data-flag-icon="us">
+            &#127482;&#127480; English
+          </option>
+          <option value="de" data-flag-icon="de">
+            &#127465;&#127466; German
+          </option>
+          <option value="fr" data-flag-icon="fr">
+            &#127467;&#127479; French
+          </option>
+        </select>
+      </div>
+      <div class="login">
+        <a href="../form/Form.html">Login / Signup</a>
+      </div>
+      <div class="actions">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-shopping-basket"></i>
+      </div>
+    </header>
+    <main>
+      <!--Nav Bar-->
+      <section>
+        <nav class="navbar">
+          <ul class="navbar-items">
+            <li class="dropdown">
+              <h5>About<span class="hamburger">&#9776;</span></h5>
+              <div class="dropdown-content">
+                <a href="../about/story.html">Our Story</a>
+                <a href="../about/mission.html">Mission & Vision</a>
+                <a href="../about/Customer.html">Customer Satisfication</a>
+              </div>
+            </li>
+            <li>
+              <h5><a href="../index.html">Main Page</a></h5>
+            </li>
+            <li class="dropdown">
+              <h5>New Products</h5>
+              <div class="dropdown-content">
+                <a href="latest-arrival.html">Latest Arrivals</a>
+                <a href="popuar.html">Popular</a>
+                <a href="Special-offer.html">Special Offers</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Electronics</h5>
+              <div class="dropdown-content">
+                <a href="../Electronics/mobile.html">Smartphones</a>
+                <a href="../Electronics/laptop.html">Laptops</a>
+                <a href="../Electronics/accessoray.html">Accessories</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Books</h5>
+              <div class="dropdown-content">
+                <a href="../Books/fiction.html">Fiction</a>
+                <a href="../Books/Non-fiction.html">Non-Fiction</a>
+                <a href="../Books/Childern.html">Children's Books</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Cosmetics</h5>
+              <div class="dropdown-content">
+                <a href="../Costematic/skincare.html">Skincare</a>
+                <a href="../Costematic/makeup.html">Makeup</a>
+                <a href="../Costematic/fragrences.html">Fragrances</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Entertainment</h5>
+              <div class="dropdown-content">
+                <a href="../Entertainment /Album.html">Albums</a>
+                <a href="../Entertainment /Movies.html">Movies</a>
+                <a href="../Entertainment /concerts.html">Concerts</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <h5>Clothes</h5>
+              <div class="dropdown-content">
+                <a href="../clothes/men.html">Men's</a>
+                <a href="../clothes/women.html">Women's</a>
+                <a href="../clothes/kids.html">Kids'</a>
+              </div>
+            </li>
+            <li>
+              <h5><a href="../Gallery/gallery.html">Gallery</a></h5>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!--Latest arrival-->
+      <h1 class="glow">Special Offers</h1>
+      <!--Cards-->
+      <section class="card-container">
+        <div class="card">
+          <a
+            href="https://www.temu.com/de-en/upgraded-wireless-headphones-wireless-earbuds-with-deep-bass-lightweight-foldable-headphones-built-in-mic-compatible-with-3-5mm-audio-cable-stereo-sound-for-travel-work-laptop-pc-cellphone-gaming-headset-for-ios-wireless-christmas-present-g-601099533468871.html?_oak_mp_inf=EMeJq6Gm1ogBGiBkY2MyYTQwYWM2N2M0MWE0ODdiOGI1OWU3YzFkMWRiOSD0v8%2B39TE%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2FFancyalgo%2FVirtualModelMatting%2F0b69e14535913f4e1a8f6792b0b00905.jpg&spec_gallery_id=4057198087&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=Njgz&_oak_gallery_order=1916196883%2C960929896%2C181931083%2C929084513%2C465708946&search_key=special%20offers%20today&refer_page_el_sn=200049&_x_ns_irclickid=1U9xlFXjZxyPUR9RiQWj01vfUkHQwIWFN2rZys0&_x_ads_account=18350&_x_ads_id=1857643&_x_ns_iradname=test%2Bapp&_x_ns_iradsize=&_x_ns_prodsku=&_x_ns_irmptype=mediapartner&_x_ns_sharedid=702660&_x_ns_ts=1715150759147&_x_ns_randint=7571958&_x_ns_adtype=TEXT_LINK&_x_ns_irmpgroupname=%22gary%22%2C%22rachel.liu%22&_x_ads_channel=impact&_x_ns_mp_value2=&_x_ns_mp_value3=&_x_ns_irmpname=MaxBounty.com%2BULC&_x_ns_irpid=10813&_x_vst_scene=adg&_x_sessn_id=umyss3yh2w&refer_page_name=search_result&refer_page_id=10009_1715150775482_eopwhyh77e"
+          >
+            <video width="220" height="180" controls>
+              <source src="video/v.mp4" class="card-img-top" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="card-body">
+              <p class="card-text">
+                [Upgraded]Wireless Headphones, Wireless earbuds With Deep Bass
+                and much more. <br />
+                Limted Deal &#8364;6.83 <br />List Price: <s>&#8364;31.99</s>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a
+            href="https://www.temu.com/de-en/3-channel-dash-cam-front-and-rear-inside-1080p-dash-cam-ir-night-vision-loop-recording-car-dvr-camera-3-lens-with-2-inch-ips-screen-3-cameras-car-dashcam-car-black-box-recording-at-same-time-wide-angle-dashboard-camera-recorder-g-601099527932466.html?_oak_mp_inf=ELKU2Z6m1ogBGiBkY2MyYTQwYWM2N2M0MWE0ODdiOGI1OWU3YzFkMWRiOSD1v8%2B39TE%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F4387247c-935a-4c58-ae92-87ac899bfbe4.jpg&spec_gallery_id=4043625811&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=MjIyMw&_oak_gallery_order=1967081600%2C1846482847%2C458243166%2C2615239%2C89867238&search_key=special%20offers%20today&refer_page_el_sn=200049&_x_ns_irclickid=1U9xlFXjZxyPUR9RiQWj01vfUkHQwIWFN2rZys0&_x_ads_account=18350&_x_ads_id=1857643&_x_ns_iradname=test%2Bapp&_x_ns_iradsize=&_x_ns_prodsku=&_x_ns_irmptype=mediapartner&_x_ns_sharedid=702660&_x_ns_ts=1715150759147&_x_ns_randint=7571958&_x_ns_adtype=TEXT_LINK&_x_ns_irmpgroupname=%22gary%22%2C%22rachel.liu%22&_x_ads_channel=impact&_x_ns_mp_value2=&_x_ns_mp_value3=&_x_ns_irmpname=MaxBounty.com%2BULC&_x_ns_irpid=10813&_x_vst_scene=adg&_x_sessn_id=umyss3yh2w&refer_page_name=search_result&refer_page_id=10009_1715150775482_eopwhyh77e"
+          >
+            <video width="220" height="180" controls>
+              <source
+                src="video/camera.mp4"
+                class="card-img-top"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <div class="card-body">
+              <p class="card-text">
+                3 Channel Dash Cam Front And Rear Inside, 1080P Dash Cam IR
+                Night Vision, <br />
+                Limted Deal &#8364;22.83 <br />List Price: <s>&#8364;56.99</s>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a
+            href="https://www.temu.com/de-en/3-pieces-quick-dry-microfiber-bath-towel-for-spa-yoga-fitness-outdoor-travel-bathroom-super-absorbent-multi-purpose-bath-towel-multicolor-available-g-601099550729475.html?_oak_mp_inf=EIPKyKmm1ogBGiBkY2MyYTQwYWM2N2M0MWE0ODdiOGI1OWU3YzFkMWRiOSD2v8%2B39TE%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F4397a9ae-e682-43a2-8058-1afef7f5d182.jpg&spec_gallery_id=4105562003&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=MTIyOA&_oak_gallery_order=748194005%2C629344932%2C974324322%2C1259880613%2C1273197837&search_key=special%20offers%20today&refer_page_el_sn=200049&_x_ns_irclickid=1U9xlFXjZxyPUR9RiQWj01vfUkHQwIWFN2rZys0&_x_ads_account=18350&_x_ads_id=1857643&_x_ns_iradname=test%2Bapp&_x_ns_iradsize=&_x_ns_prodsku=&_x_ns_irmptype=mediapartner&_x_ns_sharedid=702660&_x_ns_ts=1715150759147&_x_ns_randint=7571958&_x_ns_adtype=TEXT_LINK&_x_ns_irmpgroupname=%22gary%22%2C%22rachel.liu%22&_x_ads_channel=impact&_x_ns_mp_value2=&_x_ns_mp_value3=&_x_ns_irmpname=MaxBounty.com%2BULC&_x_ns_irpid=10813&_x_vst_scene=adg&_x_sessn_id=umyss3yh2w&refer_page_name=search_result&refer_page_id=10009_1715150775482_eopwhyh77e"
+          >
+            <video width="220" height="180" controls>
+              <source
+                src="video/Dryer.mp4"
+                class="card-img-top"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <div class="card-body">
+              <p class="card-text">
+                3 Pieces Quick Dry Microfiber Bath Towel For Spa, Yoga, Fitness
+                Outdoor Travel etc. <br />
+                Limted Deal &#8364;12.3 <br />List Price: <s>&#8364;37.99</s>
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section>
+        <footer>
+          <h2>Do you want to follow us?</h2>
+          <h3>Check out our social media pages!</h3>
+          <!-- footer links -->
+          <ul class="icon-list">
+            <li class="icon">
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a
+                href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.657308124612_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9043045&mcid=6935667189886640128&cid=&gad_source=1&gclid=Cj0KCQjw_-GxBhC1ARIsADGgDju9tBa3ypBZzBMBCjFWO_ApIU_nWxvsg5u18d6W00FF5q-4xI4lAboaAhZEEALw_wcB&gclsrc=aw.ds"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a href="https://twitter.com/?lang=en"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </footer>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

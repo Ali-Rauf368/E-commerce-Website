@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+.logo img {
+  width: 100px;
+}
+.logo:hover {
+  transform: scale(1.4);
+}
+.logo,
+.location,
+.search,
+.language,
+.login,
+.actions {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.location,
+.language,
+.login,
+.actions {
+  margin-right: 10px;
+}
+.search input {
+  padding: 5px;
+  margin-right: 5px;
+}
+.search button {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+.language select {
+  padding: 5px;
+}
+.language select option[data-flag-icon] {
+  background-image: none; /* Remove default background image */
+  padding-left: 30px;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+/* Set the flag icon as background image */
+.language select option[data-flag-icon="us"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg");
+}
+.language select option[data-flag-icon="de"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg");
+}
+.language select option[data-flag-icon="fr"] {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg");
+}
+.login a {
+  color: #fff;
+  text-decoration: none;
+}
+.actions i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+/* Nav Bar*/
+.navbar {
+  background-color: #333;
+  color: #fff;
+}
+.navbar-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0;
+}
+.navbar-items li {
+  position: relative;
+  margin-right: 45px; /*  margin to create a gap between items */
+}
+.navbar-items li:last-child {
+  margin-right: 0; /*  margin from the last item */
+}
+.navbar-items li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*forms*/
+.Whole-form {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-image: url("img/image.png");
+  background-size: cover;
+  color: white;
+}
+/* Apply a common width to input fields and textareas */
+.Whole-form input[type="text"],
+.Whole-form input[type="email"],
+.Whole-form input[type="tel"],
+.Whole-form input[type="password"],
+.Whole-form textarea {
+  width: 100%; /* Adjust this width as needed */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forms-container {
+  display: flex;
+  justify-content: space-between; /* Creates space between forms */
+  width: 60vw;
+  backdrop-filter: blur(10px);
+}
+form {
+  width: 100%; /* Each form takes 50% of the container's width */
+  padding: 15px;
+  background-color: transparent;
+  margin-right: 20px;
+}
+h1 {
+  color: white;
+  background-color: black;
+  width: 100%; /* Full width for h1 */
+  margin: 0;
+}
+fieldset {
+  border: none;
+}
+form:hover {
+  background-color: #555; /* Button background color on hover */
+}
+.forms-container button[type="submit"] {
+  width: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.forms-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/*** Footer **/
+footer {
+  background-color: black;
+  height: 150px;
+  display: block;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.icon-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.icon {
+  margin: 0 0.5rem 0 0.5rem;
+  font-size: 1.8rem;
+}
+.icon a {
+  color: #000;
+  text-decoration: none;
+}
+.icon a:hover {
+  color: #00f;
+}
