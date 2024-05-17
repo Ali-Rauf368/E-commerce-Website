@@ -54,7 +54,7 @@
 
 ## technical links
 
-- I added Fontawesome , Bootstrap , Google Font , Jquery,Form spree etc.
+- I added Fontawesome , Bootstrap , Google Font , Jquery,Form spree , Uizard etc.
 
 ## Tables
 
